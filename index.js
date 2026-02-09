@@ -1,9 +1,11 @@
 import express from "express";
 import ejs from "ejs";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
-const port = 3070;
-
+const port = process.env.PORT || 3000;
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
