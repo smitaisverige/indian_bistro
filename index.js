@@ -1,4 +1,5 @@
 import express from "express";
+import menuroute from "./routes/menu.js";
 import ejs from "ejs";
 
 const app = express();
@@ -13,3 +14,5 @@ app.use(express.static("public"));
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
+
+app.use("/menu", menuroute);
