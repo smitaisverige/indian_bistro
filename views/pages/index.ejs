@@ -1,134 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indian Bistro - Home</title>
-    <link rel="stylesheet" href="/css/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indian Bistro - Home</title>
+  <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body>
-    <header>
-        <div class="logo">
-            <img src="/images/home/logo.jpg" alt="Indian Bistro logo" width="70" height="70">
-            
-        </div>
-        <nav>
-            <ul>
-                <li><a href="" class="active">Home</a></li>
-                <li><a href="">Menu</a></li>
-                <li><a href="">Buffet</a></li>
-                <li><a href="">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
+<%- include("../partials/header", { page: "home" }) %>
 
-    <div class="hero-banner">
-        <div class="hero-overlay">
-            <h1>Experience the Flavors of India</h1>
-            <p>Authentic cuisine crafted with passion and tradition</p>
-        </div>
+<div class="hero-banner">
+  <div class="hero-overlay">
+    <h1>Experience the Flavors of India</h1>
+    <p>Authentic cuisine crafted with passion and tradition</p>
+  </div>
+</div>
+
+<div class="container">
+  <%- include("../partials/sidebar") %>
+
+  <main class="main-content">
+    <div class="welcome">
+      <h2>Welcome to Indian Bistro!</h2>
+      <p>Authentic Indian Restaurant with a modern twist.</p>
+      <p>Traditional Indian street food with Nordic influences.</p>
     </div>
+  </main>
+</div>
 
-    
-
-    <div class="container">
-        <aside class="sidebar">
-          <div class="sidebar-column">
-                <h3>Opening Hours</h3>
-                <div class="opening-hours">
-                    <div class="hours-row">
-                        <span class="day">Monday - Friday</span>
-                        <span class="time">11:00 AM - 10:00 PM</span>
-                    </div>
-                    <div class="hours-row">
-                        <span class="day">Saturday</span>
-                        <span class="time">12:00 PM - 11:00 PM</span>
-                    </div>
-                    <div class="hours-row">
-                        <span class="day">Sunday</span>
-                        <span class="time">12:00 PM - 9:00 PM</span>
-                    </div>
-                    <p class="hours-note">⭐ Happy Hour: Mon-Fri 3-6 PM</p>
-                </div>
-            </div>
-            
-        </aside>
-
-        <main class="main-content">
-            <div id="welcome-message" class="welcome">
-              <h2>Welcome to Indian Bistro!</h2>
-              <p>Authentic Indian Restaurant, we bring the vibrant flavors of India to you — with a modern twist.</p>
-              <p>Our menu is a creative fusion of traditional Indian street food and the fresh, seasonal influences of Nordic and Southern European cuisine.</p>
-            </div>
-                    </main>
-    </div>
-
-
-    <div class="category-cards-section">
-        <h2 class="section-title">Are you hungry?</h2>
-        <div class="category-cards">
-            <div class="category-card">
-                <div class="card-image starters-bg"></div>
-                <div class="card-content">
-                    <h3>Menu</h3>
-                    <p>À la carte</p>
-                    <a href="" class="card-btn">Explore the À la carte Menu!</a>
-                </div>
-            </div>
-
-            <div class="category-card">
-                <div class="card-image main-course-bg"></div>
-                <div class="card-content">
-                    <h3>Buffet</h3>
-                    <p>Authentic Indian specialties pre-selected for you everyday!</p>
-                    <a href="" class="card-btn">Explore Our Buffet!</a>
-                </div>
-            </div>
-
-            <div class="category-card">
-                <div class="card-image desserts-bg"></div>
-                <div class="card-content">
-                    <h3>Desserts & Beverages</h3>
-                    <p>Sweet delights to complete your perfect dining experience</p>
-                    <a href="" class="card-btn">Explore Our Selcted Desserts!</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-<footer>
-    <div class="footer-container">
-        <div class="footer-column">
-            <div class="footer-logo">
-                <img src="../images/logo.jpg" alt="Indian Bistro logo" width="70" height="70">
-                <h2>Indian Bistro</h2>
-            </div>
-            <p class="footer-tagline">Authentic Indian cuisine crafted with passion and tradition since 2020.</p>
-            <p class="footer-tagline">Experience the taste of India in every dish.</p>
-            <div class="social-links">
-                <a href="#" aria-label="Facebook"></a>
-                <a href="#" aria-label="Instagram"></a>
-                <a href="#" aria-label="LinkedIn"></a>
-                <a href="#" aria-label="YouTube"></a>
-            </div>
-        </div>
-
-        <div class="footer-column">
-            <h3>Contact Us</h3>
-            <div class="contact-info">
-                <p><span class="icon">📍</span> Hammarby Fabriksväg 61, 120 30 Stockholm</p>
-                <p><span class="icon">📞</span> +46 777123457</p>
-                <p><span class="icon">📧</span> info@indianbistro.se</p>
-                <p><span class="icon">🌐</span> www.indianbistro.se</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer-bottom">
-        <p>&copy; 2026 Indian Bistro. All rights reserved.</p>
-    </div>
-</footer>
-
+<%- include("../partials/footer") %>
 
 </body>
 </html>
