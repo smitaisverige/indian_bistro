@@ -1,0 +1,162 @@
+body {
+    margin: 0;
+    font-size: 1.1rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+}
+.description{
+    text-align: center;
+    color: #7B2D00;
+    font-size: 1.9rem;
+}
+.weekday-nav {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.day-tab {
+    position: relative;
+    padding: 0.5rem 1.25rem;
+    border: 2px solid var(--saffron, #E8871A);
+    background: transparent;
+    color: var(--saffron-dark, #C0691A);
+    border-radius: 40px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.day-tab:hover,
+.day-tab.active {
+    background: var(--saffron, #E8871A);
+    color: white;
+}
+
+.today-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.day-tab:not(.active) .today-dot {
+    background: var(--saffron, #E8871A);
+}
+
+/* Hide all panels by default, show only active */
+.day-panel {
+    display: none;
+}
+
+.day-panel.active {
+    display: block;
+}
+
+/* Individual card */
+.item-card {
+    background: #ffffff;
+    border: 1px solid #EDD9BC;
+    border-radius: 14px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(123, 45, 0, 0.1);
+}
+
+/* Dish name */
+.item-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #7B2D00;
+    line-height: 1.3;
+    margin: 0;
+}
+
+/* Price badge */
+.item-price {
+    display: inline-block;
+    background: #E8871A;
+    color: #ffffff;
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 0.25rem 0.65rem;
+    border-radius: 20px;
+    align-self: flex-start;
+}
+
+/* Description text */
+.item-card p {
+    font-size: 1.1rem;
+    color: black;
+    line-height: 1.2;
+    font-weight: 300;
+    margin: 0;
+}
+
+/* Soup and bread lines — slightly distinct from the description */
+.item-card p:nth-child(4),
+.item-card p:nth-child(5) {
+    font-size: 1.0rem;
+    font-weight: 400;
+    padding-top: 0.4rem;
+    border-top: 1px dashed #EDD9BC;
+}
+
+/* Remove double border between the two extra lines */
+.item-card p:nth-child(5) {
+    border-top: none;
+    padding-top: 0;
+}
+
+.meals-grid {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+
+}
+
+.meal-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.meal-column h3 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: hsl(22, 100%, 24%);
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #EDD9BC;
+    margin-bottom: 0.25rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* stack full width inside each column 
+.meal-column .item-card {
+    flex: unset;
+    width: 80%;
+} */
+
+/* collapse to single column on small screens */
+@media (max-width: 640px) {
+    .meals-grid {
+        flex-direction: column;
+    }
+}

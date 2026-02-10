@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/buffetStyles.css">
+    <script src="/scripts/buffet.js" defer></script>
+</head>
+<body>
+    <main>
+        <h2 class="description">
+            <%= description %>
+        </h2>
+        <div id="navBar"></div>
+
+        <section id="lunchBuffet">
+            <% if (locals.pageType) { %>
+                <% if (pageType==="Buffet" ) { %>
+                    <% if (locals.todayBuffet) { %>
+                    <%- include('../partials/lunchBuffet') %>
+                    <% } %>
+                <% } %>
+            <% } %>
+        </section>
+
+        <section id="dinnerBuffet"></section>
+    </main>
+</body>
+</html>
