@@ -1,8 +1,11 @@
 import express from "express";
 import ejs from "ejs";
 import homeRoutes from "./routes/home.js";
+import dotenv from "dotenv"
+
+dotenv.config();
 const app = express();
-const port = 3070;
+const port = process.env.PORT;
 
 
 app.set("view engine", "ejs");

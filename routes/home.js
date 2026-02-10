@@ -8,7 +8,7 @@ homerouter.get("/", (req, res) => {
     page: "home", // for header nav active link
     bannerTitle: "Experience the Flavors of India",
     bannerSubtitle: "Authentic cuisine crafted with passion and tradition",
-  
+    
   });
 });
 
