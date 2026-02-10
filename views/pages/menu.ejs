@@ -1,5 +1,63 @@
 <%- include('../partials/header') %>
-<section >
-  <h1>This is Menu Page</h1>
-</section>
+
+<main class="menu-page">
+    <section class="menu-section">
+        <h2 class="section-title">Vegetarian Delights</h2>
+        <div class="menu-grid">
+            <% menu.vegItems.forEach(item => { %>
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="<%= item.image %>" alt="<%= item.name %>">
+                        
+                    </div>
+                    <span class="price-tag"><%= item.price %> SEK</span>
+                    <div class="card-content">                      
+                        <h3><%= item.name %></h3>                         
+                        <p><%= item.description %></p>
+                        
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </section>
+
+    <section class="menu-section">
+        <h2 class="section-title">Non-Veg Specialties</h2>
+        <div class="menu-grid">
+            <% menu.nonVegItems.forEach(item => { %>
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="<%= item.image %>" alt="<%= item.name %>">
+                       
+                    </div>
+                     <span class="price-tag"><%= item.price %> SEK</span>
+                    <div class="card-content">
+                        <h3><%= item.name %></h3>
+                        <p><%= item.description %></p>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </section>
+
+    <section class="menu-section">
+        <h2 class="section-title">Sweet Endings</h2>
+        <div class="menu-grid">
+            <% menu.desserts.forEach(item => { %>
+                <div class="menu-card">
+                    <div class="card-image">
+                        <img src="<%= item.image %>" alt="<%= item.name %>">
+                       
+                    </div>
+                     <span class="price-tag"><%= item.price %> SEK</span>
+                    <div class="card-content">
+                        <h3><%= item.name %></h3>
+                        <p><%= item.description %></p>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </section>
+</main>
+
 <%- include('../partials/footer') %>
