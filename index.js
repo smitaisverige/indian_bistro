@@ -1,4 +1,4 @@
-/*import express from "express";
+import express from "express";
 
 
 const app = express();
@@ -8,4 +8,3 @@ const PORT = 3070;
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });
-*/
