@@ -1,6 +1,7 @@
 import express from "express";
 import ejs from "ejs";
 import dotenv from "dotenv"
+import buffetRouter from "./routes/buffetRouter.js"
 
 dotenv.config();
 const app = express();
@@ -14,7 +15,7 @@ app.use(express.static("public"));
 app.get("/", (req, res) => {
   res.render("pages/index", { title: "Indian Bistro - Home" });
 });
-
+app.use("/buffet", buffetRouter)
 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
