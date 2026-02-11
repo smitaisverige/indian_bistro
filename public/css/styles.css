@@ -57,6 +57,27 @@
     margin-top: 40px;
     color: #555;
 }
+.list-row {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.dots {
+    flex: 1; 
+    border-bottom: 2px dotted #ccc;
+    margin: 0 10px;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.item-price {
+    font-weight: bold;
+    color: indianred;
+}
 /*-----------------------------------ENDOFMENUCSS----------------------*/
 /*HOMEPAGE*/
 /**/

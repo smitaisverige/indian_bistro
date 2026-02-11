@@ -1,63 +1,29 @@
 <%- include('../partials/header') %>
 
-<main class="menu-page">
-    <section class="menu-section">
-        <h2 class="section-title">Vegetarian Delights</h2>
-        <div class="menu-grid">
-            <% menu.vegItems.forEach(item => { %>
-                <div class="menu-card">
-                    <div class="card-image">
-                        <img src="<%= item.image %>" alt="<%= item.name %>">
-                        
-                    </div>
-                    <span class="price-tag"><%= item.price %> SEK</span>
-                    <div class="card-content">                      
-                        <h3><%= item.name %></h3>                         
-                        <p><%= item.description %></p>
-                        
-                    </div>
-                </div>
-            <% }); %>
-        </div>
-    </section>
+<main class="category-selection">
+  <h2>Explore Our Menu</h2>
+  <div class="menu-grid">
+    <a href="/menu/vegItems" class="menu-card">
+      <div class="card-image">
+        <img src="/images/menu/vegmenu/paneertikka.jpg" alt="Veg" />
+      </div>
+      <div class="card-content"><h3>Vegetarian</h3></div>
+    </a>
 
-    <section class="menu-section">
-        <h2 class="section-title">Non-Veg Specialties</h2>
-        <div class="menu-grid">
-            <% menu.nonVegItems.forEach(item => { %>
-                <div class="menu-card">
-                    <div class="card-image">
-                        <img src="<%= item.image %>" alt="<%= item.name %>">
-                       
-                    </div>
-                     <span class="price-tag"><%= item.price %> SEK</span>
-                    <div class="card-content">
-                        <h3><%= item.name %></h3>
-                        <p><%= item.description %></p>
-                    </div>
-                </div>
-            <% }); %>
-        </div>
-    </section>
+    <a href="/menu/nonVegItems" class="menu-card">
+      <div class="card-image">
+        <img src="/images/menu/nonvegmenu/butterchicken.jpg" alt="Non-Veg" />
+      </div>
+      <div class="card-content"><h3>Non-Vegetarian</h3></div>
+    </a>
 
-    <section class="menu-section">
-        <h2 class="section-title">Sweet Endings</h2>
-        <div class="menu-grid">
-            <% menu.desserts.forEach(item => { %>
-                <div class="menu-card">
-                    <div class="card-image">
-                        <img src="<%= item.image %>" alt="<%= item.name %>">
-                       
-                    </div>
-                     <span class="price-tag"><%= item.price %> SEK</span>
-                    <div class="card-content">
-                        <h3><%= item.name %></h3>
-                        <p><%= item.description %></p>
-                    </div>
-                </div>
-            <% }); %>
-        </div>
-    </section>
+    <a href="/menu/desserts" class="menu-card">
+      <div class="card-image">
+        <img src="/images/menu/dessert/mangokulfi.jpg" alt="Desserts" />
+      </div>
+      <div class="card-content"><h3>Desserts</h3></div>
+    </a>
+  </div>
 </main>
 
 <%- include('../partials/footer') %>
