@@ -1,8 +1,9 @@
 import express from "express";
 import ejs from "ejs";
 import dotenv from "dotenv"
-import buffetRouter from "./routes/buffetRouter.js"
 
+
+import buffetRouter from "./routes/buffetRouter.js"
 dotenv.config();
 const app = express();
 const port = process.env.PORT;
