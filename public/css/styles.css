@@ -1,13 +1,72 @@
-/*COMMONCSS*/
-
-/*-------------------------------MENUCSS------------------------------*/
-.menu-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr; 
-    gap: 20px;
-    padding: 20px 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+body {
+  background-color: #f5f0e8;
+  color: #3a2317;
+  font-family: 'Georgia', serif;
+  line-height: 1.6;    
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  align-items: center;
+  background-color: #7a3b3b;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 60px;
+}
+
+header .logo {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav a {
+  border-bottom: 2px solid transparent;
+  color: #fff;
+  font-weight: 500;
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+  color: #f4d9a6;
+  text-decoration: underline;
+}
+
+
+/*-------------------------------MENUCSS------------------------------*/
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: 1fr; 
+  gap: 20px;
+  padding: 20px 0;
+}
 .menu-card {
     display: flex;
     flex-direction: column;
@@ -71,12 +130,30 @@
 }
 
 .item-name {
-    font-weight: bold;
+    font-size : 18px;
 }
 
 .item-price {
     font-weight: bold;
     color: indianred;
+}
+
+@media (min-width: 600px) {
+  .menu-grid {
+    grid-template-columns: 1fr 1fr; 
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row; 
+    margin: 60px auto;
+  }
+  
+  .menu-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+  }
 }
 /*-----------------------------------ENDOFMENUCSS----------------------*/
 /*HOMEPAGE*/
@@ -85,65 +162,6 @@
 /**/
 /*BUFFETPAGE*/
 /**/
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  background-color: #f5f0e8;
-  color: #3a2317;
-  font-family: 'Georgia', serif;
-  line-height: 1.6;    
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-img {
-  display: block;
-}
-
-/* ---------- HEADER ---------- */
-header {
-  align-items: center;
-  background-color: #7a3b3b;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  padding: 16px 60px;
-}
-
-header .logo {
-  align-items: center;
-  display: flex;
-  gap: 12px;
-}
-
-nav ul {
-  display: flex;
-  gap: 30px;
-  list-style: none;
-}
-
-nav a {
-  border-bottom: 2px solid transparent;
-  color: #fff;
-  font-weight: 500;
-  padding-bottom: 4px;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-nav a:hover,
-nav a.active {
-  color: #f4d9a6;
-  text-decoration: underline;
-}
 
 /* ---------- HERO BANNER ---------- */
 .hero-banner {
@@ -176,6 +194,7 @@ nav a.active {
 /* ---------- MAIN CONTAINER ---------- */
 .container {
   display: flex;
+  flex-direction:column;
   gap: 40px;
   margin: 60px auto;
   max-width: 1200px;

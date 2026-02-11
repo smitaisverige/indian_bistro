@@ -8,10 +8,9 @@ menurouter.get("/", (req, res) => {
   res.render("pages/menu", { 
     page: "menu",
     title: "Menu",        
-    subtitle: "Authentic Flavors",
     menu: menuData,
-    pageTitle: "Menu",
-    pageFooter: "&copy; TheIndianBistro | All Rights Reserved | 2026"
+    pageTitle: "Menu"
+    
   });
 });
 
@@ -22,10 +21,9 @@ menurouter.get("/:category", (req, res) => {
     res.render("pages/categoryList", { 
         page: "menu",
         pageTitle: `${category.replace('Items', '')} Menu | Indian Bistro`, 
-        title: category.replace('Items', ''),
-        subtitle: "Fresh & Authentic",
+        title: category.replace('Items', ' '),     
         items: items,
-        pageFooter: "&copy; TheIndianBistro | All Rights Reserved | 2026"
+        
     });
 });
 
