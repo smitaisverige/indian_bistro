@@ -3,6 +3,7 @@ import menuroute from "./routes/menu.js";
 import dotenv from "dotenv"
 dotenv.config() ;
 
+dotenv.config();
 const app = express();
 const port = process.env.PORT ;
 
