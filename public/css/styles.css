@@ -1,3 +1,90 @@
+/*COMMONCSS*/
+
+/*-------------------------------MENUCSS------------------------------*/
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    position: relative;
+    height: 200px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: linear-gradient(to bottom, rgba(239, 84, 84, 0) 0%, rgba(0,0,0,0.7) 100%);
+}
+
+.price-tag {
+    display: block;       
+    padding: 15px 15px;    
+    font-weight: bold;
+    color: #7a3b3b;      
+    background-color: #f9f9f9; 
+    border-bottom: 1px solid #eee;
+    font-size: 1.0rem;
+    font-weight: bold;
+    text-align:center;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.section-title {
+    border-bottom: 2px solid indianred;
+    display: inline-block;
+    margin-top: 40px;
+    color: #555;
+}
+.list-row {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.dots {
+    flex: 1; 
+    border-bottom: 2px dotted #ccc;
+    margin: 0 10px;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.item-price {
+    font-weight: bold;
+    color: indianred;
+}
+/*-----------------------------------ENDOFMENUCSS----------------------*/
+/*HOMEPAGE*/
+/**/
+/*ABOUTPAGE*/
+/**/
+/*BUFFETPAGE*/
+/**/
 * {
   box-sizing: border-box;
   margin: 0;
