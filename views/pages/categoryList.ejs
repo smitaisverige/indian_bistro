@@ -1,0 +1,19 @@
+<%- include('../partials/header') %>
+
+<main class="list-container">
+    <h2><%= title.replace('Items', '') %> Menu</h2>
+    
+    <div class="price-list">
+        <% items.forEach(item => { %>
+            <div class="list-row">
+                <span class="item-name"><%= item.name %></span>
+                <span class="dots"></span>
+                <span class="item-price"><%= item.price %> kr</span>
+            </div>
+        <% }); %>
+    </div>
+    
+    <a href="/menu" class="back-btn">Back to Menu</a>
+</main>
+
+<%- include('../partials/footer') %>

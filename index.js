@@ -1,10 +1,11 @@
 import express from "express";
-import ejs from "ejs";
+import menuroute from "./routes/menu.js";
 import dotenv from "dotenv"
+dotenv.config() ;
 
 dotenv.config();
 const app = express();
-const port = process.env.PORT;
+const port = process.env.PORT ;
 
 
 app.set("view engine", "ejs");
@@ -21,3 +22,5 @@ app.get("/test", (req, res) => {
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
+
+app.use("/menu", menuroute);
