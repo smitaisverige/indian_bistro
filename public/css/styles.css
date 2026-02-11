@@ -1,0 +1,296 @@
+/*COMMONCSS*/
+
+/*-------------------------------MENUCSS------------------------------*/
+.menu-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    gap: 20px;
+    padding: 20px 0;
+}
+
+.menu-card {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    position: relative;
+    height: 200px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background: linear-gradient(to bottom, rgba(239, 84, 84, 0) 0%, rgba(0,0,0,0.7) 100%);
+}
+
+.price-tag {
+    display: block;       
+    padding: 15px 15px;    
+    font-weight: bold;
+    color: #7a3b3b;      
+    background-color: #f9f9f9; 
+    border-bottom: 1px solid #eee;
+    font-size: 1.0rem;
+    font-weight: bold;
+    text-align:center;
+}
+
+.card-content {
+    padding: 20px;
+    text-align: center;
+}
+
+.section-title {
+    border-bottom: 2px solid indianred;
+    display: inline-block;
+    margin-top: 40px;
+    color: #555;
+}
+.list-row {
+    display: flex;
+    align-items: baseline;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.dots {
+    flex: 1; 
+    border-bottom: 2px dotted #ccc;
+    margin: 0 10px;
+}
+
+.item-name {
+    font-weight: bold;
+}
+
+.item-price {
+    font-weight: bold;
+    color: indianred;
+}
+/*-----------------------------------ENDOFMENUCSS----------------------*/
+/*HOMEPAGE*/
+/**/
+/*ABOUTPAGE*/
+/**/
+/*BUFFETPAGE*/
+/**/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f5f0e8;
+  color: #3a2317;
+  font-family: 'Georgia', serif;
+  line-height: 1.6;    
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  align-items: center;
+  background-color: #7a3b3b;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 60px;
+}
+
+header .logo {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav a {
+  border-bottom: 2px solid transparent;
+  color: #fff;
+  font-weight: 500;
+  padding-bottom: 4px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a.active {
+  color: #f4d9a6;
+  text-decoration: underline;
+}
+
+/* ---------- HERO BANNER ---------- */
+.hero-banner {
+  background: url("/images/home/hero.jpg") center/cover no-repeat;
+  height: 70vh;
+  position: relative;
+}
+
+.hero-overlay {
+  align-items: center;
+  background: rgba(0, 0, 0, 0.55);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.hero-overlay h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  font-size: 1.2rem;
+}
+
+/* ---------- MAIN CONTAINER ---------- */
+.container {
+  display: flex;
+  gap: 40px;
+  margin: 60px auto;
+  max-width: 1200px;
+  padding: 0 20px;
+}
+
+/* ---------- SIDEBAR ---------- */
+.sidebar {
+  width: 310px;
+}
+
+
+
+.sidebar-column {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 25px;
+}
+
+.sidebar-column h3 {
+  color: #e63946;
+  margin-bottom: 15px;
+}
+
+.hours-row {
+  display: flex;
+  font-size: 0.95rem;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.hours-note {
+  color: #555;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* ---------- MAIN CONTENT ---------- */
+.main-content {
+  flex: 1;
+}
+
+.welcome h2 {
+  color: #1c1c1c;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.welcome p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: #1c1c1c;
+  color: #ddd;
+  padding: 50px 20px 20px;
+}
+
+.footer-container {
+  display: grid;
+  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: auto;
+  max-width: 1200px;
+}
+
+.footer-logo {
+  align-items: center;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.footer-logo h2 {
+  color: #fff;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.contact-info p {
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
+
+.footer-bottom {
+  color: #aaa;
+  font-size: 0.85rem;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
