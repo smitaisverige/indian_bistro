@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import menuroute from "./routes/menu.js";
 import buffetRouter from "./routes/buffetRouter.js";
-import aboutRouter from "./routes/about.js";
+import aboutRouter from "./routes/aboutRouter.js";
 
 dotenv.config();
 
