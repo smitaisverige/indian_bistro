@@ -8,7 +8,7 @@ const port = 3070;
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
-app.get("/", (req, res) => {
+app.get("/test", (req, res) => {
   res.send("Welcome to the Indian Bistro")
 })
 
