@@ -1,6 +1,5 @@
 import express from "express";
 import ejs from "ejs";
-import homeRoutes from "./routes/home.js";
 import dotenv from "dotenv"
 
 dotenv.config();
@@ -10,6 +9,7 @@ const port = process.env.PORT;
 
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+
 
 app.get("/", (req, res) => {
   res.render("pages/index", { title: "Indian Bistro - Home" });
