@@ -4,9 +4,9 @@ function showDay(day) {
     document.querySelectorAll('.day-tab').forEach(b => b.classList.remove('active'));
     document.getElementById('day-' + day).classList.add('active');
 
-    document.querySelectorAll('.day-tab').forEach(b => {
+    document.querySelectorAll('.day-tab').forEach(dayTab => {
 
-        if (b.textContent.trim().startsWith(day)) b.classList.add('active');
+        if (dayTab.textContent.trim().startsWith(day)) dayTab.classList.add('active');
 
     });
 }

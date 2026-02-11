@@ -63,4 +63,28 @@ export const weeklyBuffet = {
             { itemName: "Shrimp Mushroom",  price: "149 kr", soupName: "Lentil Soup",                bread: "Nan Bread",              itemDescription: "Small shrimp stew with mushrooms, tomato and onion in curry sauce." },
         ],
     },
+     Saturday: {
+        lunch: [
+            { itemName: "Mixed Thali",      price: "159 kr", itemDescription: "Chicken Tikka Butter Masala, Palak Paneer, Lamb Korachi Balti and Alu Baingan Achari with Naan bread." },
+            { itemName: "Lamb Korai Gosht", price: "139 kr", itemDescription: "Lamb stew with fried onions, peppers, herbs and garam masala in a tomato and cashew nut sauce." },
+            { itemName: "Shrimp Mushroom",  price: "139 kr", itemDescription: "Small shrimp stew with mushrooms, tomato and onion in curry sauce." },
+        ],
+        dinner: [
+            { itemName: "Mixed Thali",      price: "169 kr", soupName: "Lentil Soup / Chicken Soup", bread: "Garlic Nan / Nan Bread", itemDescription: "Chicken Tikka Butter Masala, Palak Paneer, Lamb Korachi Balti and Alu Baingan Achari with Naan bread." },
+            { itemName: "Lamb Korai Gosht", price: "149 kr", soupName: "Lamb Soup",                  bread: "Nan Bread",              itemDescription: "Lamb stew with fried onions, peppers, herbs and garam masala in a tomato and cashew nut sauce." },
+            { itemName: "Shrimp Mushroom",  price: "149 kr", soupName: "Lentil Soup",                bread: "Nan Bread",              itemDescription: "Small shrimp stew with mushrooms, tomato and onion in curry sauce." },
+        ],
+    },
+     Sunday: {
+        lunch: [
+            { itemName: "Mixed Thali",      price: "159 kr", itemDescription: "Chicken Tikka Butter Masala, Palak Paneer, Lamb Korachi Balti and Alu Baingan Achari with Naan bread." },
+            { itemName: "Lamb Korai Gosht", price: "139 kr", itemDescription: "Lamb stew with fried onions, peppers, herbs and garam masala in a tomato and cashew nut sauce." },
+            { itemName: "Shrimp Mushroom",  price: "139 kr", itemDescription: "Small shrimp stew with mushrooms, tomato and onion in curry sauce." },
+        ],
+        dinner: [
+            { itemName: "Mixed Thali",      price: "169 kr", soupName: "Lentil Soup / Chicken Soup", bread: "Garlic Nan / Nan Bread", itemDescription: "Chicken Tikka Butter Masala, Palak Paneer, Lamb Korachi Balti and Alu Baingan Achari with Naan bread." },
+            { itemName: "Lamb Korai Gosht", price: "149 kr", soupName: "Lamb Soup",                  bread: "Nan Bread",              itemDescription: "Lamb stew with fried onions, peppers, herbs and garam masala in a tomato and cashew nut sauce." },
+            { itemName: "Shrimp Mushroom",  price: "149 kr", soupName: "Lentil Soup",                bread: "Nan Bread",              itemDescription: "Small shrimp stew with mushrooms, tomato and onion in curry sauce." },
+        ],
+    },
 };

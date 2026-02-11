@@ -10,15 +10,18 @@
 <body>
     <main>
         <h2 class="description">
-            <%= description %>
+            <% if (locals.mealType === 'lunch') { %>Lunch Buffet
+            <% } else if (locals.mealType === 'dinner') { %>Dinner Buffet
+            <% } else { %><%= description %><% } %>
         </h2>
         <div id="navBar"></div>
-
+        <h2 class="description">
+    
         <section id="lunchBuffet">
             <% if (locals.pageType) { %>
                 <% if (pageType==="Buffet" ) { %>
                     <% if (locals.todayBuffet) { %>
-                    <%- include('../partials/lunchBuffet') %>
+                    <%- include('../partials/buffetDisplay.ejs') %>
                     <% } %>
                 <% } %>
             <% } %>
