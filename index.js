@@ -13,7 +13,10 @@ app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 app.get("/", (req, res) => {
-  res.render("pages/index", { title: "Indian Bistro - Home" });
+  res.render("pages/index", { 
+    title: "Indian Bistro - Home",
+    page:"home"
+  });
 });
 app.use("/buffet", buffetRouter);
 app.use("/about", aboutRouter);
