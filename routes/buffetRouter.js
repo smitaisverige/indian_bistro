@@ -1,6 +1,7 @@
 import express from "express";
 import * as path from "path";
 import { weeklyBuffet } from '../data/buffetData.js';
+import {otherItems} from '../data/buffetData.js'
 
 
 const buffetRouter = express.Router();

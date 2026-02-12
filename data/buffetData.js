@@ -88,3 +88,8 @@ export const weeklyBuffet = {
         ],
     },
 };
+export const otherItems= {
+    bread : ["Nan bread", "Garlic Bread","Parata"],
+    soup : ["Lentil Soup", "Chicken Soup"],
+    desert : ["Kulfi","Gajar halwa"]
+}
