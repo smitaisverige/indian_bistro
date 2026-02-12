@@ -1,59 +1,59 @@
 <div class="weekday-nav">
-    <% Object.keys(weekBuffet).forEach(day => { %>
+    <% Object.keys(weekBuffet).forEach(day=> { %>
         <button class="day-tab <%= day === todaysWeekDay ? 'active' : '' %>" onclick="showDay('<%= day %>')">
             <%= day %>
-            <% if (day === todaysWeekDay) { %><span class="today-dot"></span><% } %>
+                <% if (day===todaysWeekDay) { %><span class="today-dot"></span>
+                    <% } %>
         </button>
-    <% }) %>
+        <% }) %>
 </div>
 
-<% Object.entries(weekBuffet).forEach(([day, menu]) => { %>
+<% Object.entries(weekBuffet).forEach(([day, menu])=> { %>
     <div id="day-<%= day %>" class="day-panel <%= day === todaysWeekDay ? 'active' : '' %>">
         <div class="meals-grid">
-
-            <% if (locals.mealType === 'lunch' || locals.mealType === 'both' || !locals.mealType) { %>
             <div class="meal-column">
-                <h3>Lunch Buffet</h3>
-                <% if (menu.lunch && menu.lunch.length > 0) { %>
-                    <% menu.lunch.forEach(item => { %>
-                        <div class="item-card">
-                            <h4><%= item.itemName %></h4>
-                            <span class="item-price"><%= item.price %></span>
-                            <p class="item-description"><%= item.itemDescription %></p>
-                        </div>
+                <h3>Lunch</h3>
+                <% menu.lunch.forEach(item=> { %>
+                    <div class="item-card">
+                        <h4>
+                            <%= item.itemName %>
+                        </h4>
+                        <span class="item-price">
+                            <%= item.price %>
+                        </span>
+                        <p>
+                            <%= item.itemDescription %>
+                        </p>
+                    </div>
                     <% }) %>
-                <% } else { %>
-                    <p class="no-items">No lunch items available for this day.</p>
-                <% } %>
             </div>
-            <% } %>
 
-            <% if (locals.mealType === 'dinner' || locals.mealType === 'both' || !locals.mealType) { %>
             <div class="meal-column">
-                <h3>Dinner Buffet</h3>
-                <% if (menu.dinner && menu.dinner.length > 0) { %>
-                    <% menu.dinner.forEach(item => { %>
-                        <div class="item-card">
-                            <h4><%= item.itemName %></h4>
-                            <span class="item-price"><%= item.price %></span>
-                            <p class="item-description"><%= item.itemDescription %></p>
-                            <% if (item.soupName) { %>
-                                <p class="item-extras"><strong>Soup:</strong> <%= item.soupName %></p>
-                            <% } %>
-                            <% if (item.bread) { %>
-                                <p class="item-extras"><strong>Bread:</strong> <%= item.bread %></p>
-                            <% } %>
-                            <% if (item.Includes) { %>
-                                <p class="item-extras"><strong>Includes:</strong> <%= item.Includes %></p>
-                            <% } %>
-                        </div>
+                <h3>Dinner</h3>
+                <% menu.dinner.forEach(item=> { %>
+                    <div class="item-card">
+                        <h4>
+                            <%= item.itemName %>
+                        </h4>
+                        <span class="item-price">
+                            <%= item.price %>
+                        </span>
+                        <p>
+                            <%= item.itemDescription %>
+                        </p>
+                        <p>
+                            <%= item.soupName %>
+                        </p>
+                        <p>
+                            <%= item.bread %>
+                        </p>
+                    </div>
                     <% }) %>
-                <% } else { %>
-                    <p class="no-items">No dinner items available for this day.</p>
-                <% } %>
             </div>
-            <% } %>
-
         </div>
     </div>
-<% }) %>
+    <% }) %>
+
+
+
+    
