@@ -1,0 +1,68 @@
+
+<div class="weekday-nav">
+    <% 
+    // Use lunch data for day list (both have same days)
+    Object.keys(weeklyLunchBuffet).forEach(day => { %>
+        <button class="day-tab <%= day === todaysWeekDay ? 'active' : '' %>" onclick="showDay('<%= day %>')">
+            <%= day %>
+            <% if (day === todaysWeekDay) { %><span class="today-dot"></span><% } %>
+        </button>
+    <% }) %>
+</div>
+
+<% Object.keys(weeklyLunchBuffet).forEach(day => { %>
+    <div id="day-<%= day %>" class="day-panel <%= day === todaysWeekDay ? 'active' : '' %>">
+        <div class="meals-grid">
+
+            <% if (locals.mealType === 'lunch' || locals.mealType === 'both') { %>
+            <div class="meal-column">
+                <h3>Lunch</h3>
+                <% weeklyLunchBuffet[day].lunch.forEach(item => { %>
+                    <div class="item-card">
+                        <h4><%= item.itemName +":"%> <span class="item-price"> <%= item.price %> </span></h4>
+                        <p><%= item.itemDescription %></p>
+                    </div>
+                <% }) %>
+            </div>
+            <% } %>
+
+            <% if (locals.mealType === 'dinner' || locals.mealType === 'both') { %>
+            <div class="meal-column">
+                <h3>Dinner</h3>
+                <% weeklyDinnerBuffet[day].dinner.forEach(item => { %>
+                    <div class="item-card">
+                        <h4><%= item.itemName +":"%> <span class="item-price"> <%= item.price %> </span></h4>
+                        <p><%= item.itemDescription %></p>
+                        <% if (item.Includes) { %>
+                            <p class="includes-note"><%= item.Includes %></p>
+                        <% } %>
+                    </div>
+                <% }) %>
+            </div>
+            <% } %>
+
+        </div>
+    </div>
+<% }) %>
+<% if (locals.mealType === 'dinner' || locals.mealType === 'both') { %>
+   <div class="buffet-extras">
+    <h3 class="extras-title">Included Choice for Dinner</h3>
+
+    <div class="extras-grid">
+        <div class="extra-card">
+            <h4>Bread</h4>
+            <p><%= otherItems.bread.join(" / ") %></p>
+        </div>
+
+        <div class="extra-card">
+            <h4>Soup</h4>
+            <p><%= otherItems.soup.join(" / ") %></p>
+        </div>
+
+        <div class="extra-card">
+            <h4>Dessert</h4>
+            <p><%= otherItems.desert.join(" / ") %></p>
+        </div>
+    </div>
+</div>
+<% } %>
