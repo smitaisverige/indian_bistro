@@ -1,5 +1,5 @@
 const aboutData = {
-    // Page Information
+
     pageTitle: "Our Culinary Journey",
     
     // About Us Sections
@@ -20,45 +20,6 @@ const aboutData = {
         
     },
     
-    // Chefs Data
-    chefs: [
-        {
-            id: 1,
-            name: "Chef Rajesh Kumar",
-            title: "Executive Chef",
-            specialty: "North Indian Cuisine",
-            experience: "20 years",
-            bio: "Master of tandoori cooking and traditional North Indian recipes. Trained in Delhi's finest kitchens.",
-            signature_dish: "Butter Chicken"
-        },
-        {
-            id: 2,
-            name: "Chef Priya Sharma",
-            title: "Head Pastry Chef",
-            specialty: "Indian Desserts",
-            experience: "15 years",
-            bio: "Expert in traditional Indian sweets and fusion desserts. Creates magical experiences with cardamom and saffron.",
-            signature_dish: "Gulab Jamun Cheesecake"
-        },
-        {
-            id: 3,
-            name: "Chef Arjun Patel",
-            title: "Sous Chef",
-            specialty: "South Indian Cuisine",
-            experience: "12 years",
-            bio: "Specialist in coastal and South Indian flavors. Brings the essence of Kerala and Tamil Nadu to every plate.",
-            signature_dish: "Dosa Varieties"
-        },
-        {
-            id: 4,
-            name: "Chef Meera Singh",
-            title: "Spice Specialist",
-            specialty: "Spice Blending",
-            experience: "18 years",
-            bio: "Curator of our signature spice blends. Her expertise in combining flavors creates the magic in every dish.",
-            signature_dish: "Garam Masala Blend"
-        }
-    ],
     
     // Reviews Data
     reviews: [
