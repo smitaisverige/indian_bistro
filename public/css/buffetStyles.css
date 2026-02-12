@@ -84,7 +84,7 @@ body {
     color: #ffffff;
     font-size: 0.8rem;
     font-weight: 500;
-    padding: 0.25rem 0.65rem;
+    padding: 0.2rem 0.5rem;
     border-radius: 20px;
     align-self: flex-start;
 }
@@ -131,7 +131,7 @@ body {
 }
 
 /* stack full width inside each column 
-.meal-column .item-card {
+.meal-column .item-card .buffet-extras {
     flex: unset;
     width: 80%;
 } */
