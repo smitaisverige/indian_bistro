@@ -145,6 +145,10 @@ nav a.active {
     font-weight: bold;
     color: indianred;
 }
+.list-container{
+  margin : 0;
+  padding-left :30px ;
+}
 .menu-container{
   display: flex;
   flex-direction:column;

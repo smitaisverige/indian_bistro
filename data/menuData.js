@@ -9,13 +9,18 @@ const menuData = {
       price: "149",
     },
     {
-      name: "Dal Makhani",
-      price: "149",
+      name: "Malai Kofta",
+      price: "129",
     },
     {
-      name: "Dal Makhani",
-      price: "149",
+      name: "Sarso Ka Saag",
+      price: "119",
     },
+    {
+      name: "Bhendi Fry",
+      price:"89",
+    }
+
   ],
   nonVegItems: [
     {
@@ -27,13 +32,17 @@ const menuData = {
       price: "180",
     },
     {
-      name: "Butter Chicken",
+      name: "Chicken Korma",
       price: "150",
     },
     {
-      name: "Lamb Rogan Josh",
+      name: "Prawn Curry",
       price: "180",
     },
+    {
+      name: "Kadhai Chicken",
+      price: "219",
+    }
   ],
   starterItems: [
     {
@@ -68,11 +77,11 @@ const menuData = {
       price: "70",
     },
     {
-      name: "Gulab Jamun",
+      name: "Vanilla Icecream",
       price: "60",
     },
     {
-      name: "Mango Kulfi",
+      name: "Chocolate Icecream",
       price: "70",
     },
   ],
