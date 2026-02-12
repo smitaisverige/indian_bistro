@@ -62,7 +62,7 @@ const menuData = {
       price: "60",
     },
     {
-      name: "Inion Rings",
+      name: "Onion Rings",
       price: "60",
     },
   ],
