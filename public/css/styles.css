@@ -182,6 +182,12 @@ nav a.active {
   padding: 0 20px;
 }
 
+.hero-banne{
+  background-image: url("../images/about/image1.png") ;
+   height: 70vh;
+  
+}
+
 /* ---------- SIDEBAR ---------- */
 .sidebar {
   width: 310px;
