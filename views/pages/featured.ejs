@@ -1,28 +1,24 @@
-
-<%- include('../partials/header') %>
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/header.ejs') %>
 <body>
-
     <main>
         <h2 class="description">
             <% if (locals.mealType === 'lunch') { %>Lunch Buffet
             <% } else if (locals.mealType === 'dinner') { %>Dinner Buffet
             <% } else { %><%= description %><% } %>
         </h2>
+        
         <div id="navBar"></div>
-        <h2 class="description">
-    
+
         <section id="lunchBuffet">
-            <% if (locals.pageType) { %>
-                <% if (pageType==="Buffet" ) { %>
-                    <% if (locals.todayBuffet) { %>
-                    <%- include('../partials/buffetDisplay.ejs') %>
-                    <% } %>
-                <% } %>
+            <% if (locals.pageType === "Buffet") { %>
+                <%- include('../partials/lunchBuffet.ejs') %>
             <% } %>
         </section>
 
         <section id="dinnerBuffet"></section>
     </main>
-    <%- include('../partials/footer') %>
+    <%- include('../partials/footer.ejs') %>
 </body>
 </html>
