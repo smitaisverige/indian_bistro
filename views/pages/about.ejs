@@ -9,6 +9,98 @@
         </div>
     </div>
 
+     <!-- About Us Section -->
+    <section class="about-section">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About Us</h2>
+                
+                <% if (data && data.aboutSections) { %>
+                <div class="section-block">
+                    <h3><%= data.aboutSections.essence.title %></h3>
+                    <p><%= data.aboutSections.essence.content %></p>
+                </div>
+
+                <div class="section-block">
+                    <h3><%= data.aboutSections.philosophy.title %></h3>
+                    <p><%= data.aboutSections.philosophy.content %></p>
+                </div>
+                <% } else { %>
+                <p>Welcome to Spice Route Bistro - Authentic Indian Cuisine</p>
+                <% } %>
+            </div>
+
+            <img src="../css/images/image3.png" alt="Spice Route Bistro interior" class="about-image" width="500" height="500">
+             
+            </div>
+        </div>
+    </section>
+
+    <section class="featured-section">
+        <div class="featured-container">
+            <div class="dish-image">
+                <img src="../css/images/chicken-tikka.png" alt="Chicken Tikka dish" width="400" height="300">
+            </div>
+            
+            <div class="dish-content">
+                <h3>Signature Dishes</h3>
+                <h4>Chicken Tikka</h4>
+                <% if (data && data.aboutSections && data.aboutSections.dish) { %>
+                <p><%= data.aboutSections.dish.description %></p>
+                <% } else { %>
+                <p>Our signature chicken tikka is marinated in traditional spices and yogurt, grilled to perfection.</p>
+                <% } %>
+                <a href="/menu" class="cta-button">View Full Menu</a>
+            </div>
+        </div>
+    </section>
+<!-- Reviews Section -->
+    <% if (data && data.reviews && data.reviews.length > 0) { %>
+    <section class="reviews-section">
+        <div class="section-header">
+            <h2>What Our Guests Say</h2>
+            <p>Hear from our happy customers</p>
+            <div class="overall-rating">
+                <div class="rating-stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                </div>
+                <p class="rating-text">5.0 out of 5 stars based on <%= data.reviews.length %> reviews</p>
+            </div>
+        </div>
+        
+        <div class="reviews-grid">
+            <% data.reviews.forEach(function(review) { %>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <div style="width: 50px; height: 50px; background: #FFD700; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 24px; border: 2px solid #FFD700;">
+                                😊
+                            </div>
+                            <div style="margin-left: 12px;">
+                                <h4><%= review.name %></h4>
+                                <p class="review-location"><i class="fas fa-map-marker-alt"></i> <%= review.location %></p>
+                            </div>
+                        </div>
+                        <div class="review-rating">
+                            <% for(var i = 0; i < review.rating; i++) { %>
+                                <i class="fas fa-star"></i>
+                            <% } %>
+                        </div>
+                    </div>
+                    <p class="review-text">"<%= review.review %>"</p>
+                    <p class="review-date"><%= new Date(review.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) %></p>
+                </div>
+            <% }); %>
+        </div>        
+    </section>
+    <% } %>
+    </main>
+
+
 <%- include('../partials/footer') %>
 
 
