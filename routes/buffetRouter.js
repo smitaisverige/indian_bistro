@@ -6,10 +6,7 @@ const buffetRouter = express.Router();
 
 function buildPayload(mealType = "both") {
     const dayName = [
-        'Sunday','Monday','Tuesday',
-        'Wednesday','Thursday','Friday','Saturday'
-    ][new Date().getDay()];
-    
+        'Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday' ][new Date().getDay()];
     return {
         weeklyLunchBuffet,
         weeklyDinnerBuffet,
@@ -18,7 +15,7 @@ function buildPayload(mealType = "both") {
         description: "Our carefully curated tasteful Buffet",
         pageType: "Buffet",
         mealType,
-        page: "buffet"   // 👈 ADD THIS
+        page: "buffet"   
     };
 }
 
