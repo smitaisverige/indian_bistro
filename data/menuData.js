@@ -17,8 +17,8 @@ const menuData = {
       price: "119",
     },
     {
-      name: "Bhendi Fry",
-      price:"89",
+      name: "Veg Combo Thali",
+      price:"219",
     }
 
   ],
@@ -40,7 +40,7 @@ const menuData = {
       price: "180",
     },
     {
-      name: "Kadhai Chicken",
+      name: "Kadhai Chicken Thali",
       price: "219",
     }
   ],

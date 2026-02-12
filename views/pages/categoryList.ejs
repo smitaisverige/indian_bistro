@@ -1,7 +1,7 @@
 <%- include('../partials/header') %>
 <div class ="menu-container">
 <main class="list-container">
-    <h2><%= title.replace('Items', ' ').charAt(0).toUpperCase() + title.slice(1) %> Menu</h2>
+    <h2><%= title.charAt(0).toUpperCase() + title.slice(1) %> Menu </h2>
     
     <div class="price-list">
         <% items.forEach(item => { %>

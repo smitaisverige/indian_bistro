@@ -6,11 +6,8 @@ const menurouter = express.Router();
 
 menurouter.get("/", (req, res) => {
   res.render("pages/menu", { 
-    page: "menu",
     title: "Menu",        
     menu: menuData,
-    pageTitle: "Menu"
-    
   });
 });
 
@@ -20,8 +17,8 @@ menurouter.get("/:category", (req, res) => {
 
     res.render("pages/categoryList", { 
         page: "menu",
-        pageTitle: `${category.replace('Items', '')} Menu | Indian Bistro`, 
-        title: category.replace('Items', ' '),     
+        pageTitle: `${category.replace('Items', ' ')} Menu | Indian Bistro`, 
+        title: `${category.replace('Items',' ')}`,     
         items: items,
         
     });
