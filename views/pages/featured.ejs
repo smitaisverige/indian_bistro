@@ -1,0 +1,27 @@
+<%- include('../partials/head') %>
+<body>
+    <%- include('../partials/header') %>
+    <main>
+        <h2 class="description">
+            <% if (locals.mealType === 'lunch') { %>Lunch Buffet
+            <% } else if (locals.mealType === 'dinner') { %>Dinner Buffet
+            <% } else { %><%= description %><% } %>
+        </h2>
+        <div id="navBar"></div>
+        <h2 class="description">
+    
+        <section id="lunchBuffet">
+            <% if (locals.pageType) { %>
+                <% if (pageType==="Buffet" ) { %>
+                    <% if (locals.todayBuffet) { %>
+                    <%- include('../partials/buffetDisplay.ejs') %>
+                    <% } %>
+                <% } %>
+            <% } %>
+        </section>
+
+        <section id="dinnerBuffet"></section>
+    </main>
+    <%- include('../partials/footer') %>
+</body>
+</html>
