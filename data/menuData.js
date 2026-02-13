@@ -54,7 +54,7 @@ const menuData = {
       price: "180",
     },
     {
-      name: "Chicken Korma",
+      name: "Chicken Tikka",
       price: "150",
     },
     {
