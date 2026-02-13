@@ -1,14 +1,14 @@
-<%- include('../partials/header') %>
+<%- include('../partials/header' , { page: "menu" })%>
 <div class ="menu-container">
 <main class="list-container">
-    <h2><%= title.replace('Items', ' ').charAt(0).toUpperCase() + title.slice(1) %> Menu</h2>
+    <h2><%= title.charAt(0).toUpperCase() + title.slice(1) %> Menu </h2>
     
-    <div class="price-list">
+    <div class="menu-list">
         <% items.forEach(item => { %>
             <div class="list-row">
                 <span class="item-name"><%= item.name %></span>
                 <span class="dots"></span>
-                <span class="item-price"><%= item.price %> kr</span>
+                <span class="menu-item-price"><%= item.price %> kr</span>
             </div>
         <% }); %>
     </div>

@@ -1,0 +1,59 @@
+<div class="weekday-nav">
+    <% Object.keys(weekBuffet).forEach(day=> { %>
+        <button class="day-tab <%= day === todaysWeekDay ? 'active' : '' %>" onclick="showDay('<%= day %>')">
+            <%= day %>
+                <% if (day===todaysWeekDay) { %><span class="today-dot"></span>
+                    <% } %>
+        </button>
+        <% }) %>
+</div>
+
+<% Object.entries(weekBuffet).forEach(([day, menu])=> { %>
+    <div id="day-<%= day %>" class="day-panel <%= day === todaysWeekDay ? 'active' : '' %>">
+        <div class="meals-grid">
+            <div class="meal-column">
+                <h3>Lunch</h3>
+                <% menu.lunch.forEach(item=> { %>
+                    <div class="item-card">
+                        <h4>
+                            <%= item.itemName %>
+                        </h4>
+                        <span class="item-price">
+                            <%= item.price %>
+                        </span>
+                        <p>
+                            <%= item.itemDescription %>
+                        </p>
+                    </div>
+                    <% }) %>
+            </div>
+
+            <div class="meal-column">
+                <h3>Dinner</h3>
+                <% menu.dinner.forEach(item=> { %>
+                    <div class="item-card">
+                        <h4>
+                            <%= item.itemName %>
+                        </h4>
+                        <span class="item-price">
+                            <%= item.price %>
+                        </span>
+                        <p>
+                            <%= item.itemDescription %>
+                        </p>
+                        <p>
+                            <%= item.soupName %>
+                        </p>
+                        <p>
+                            <%= item.bread %>
+                        </p>
+                    </div>
+                    <% }) %>
+            </div>
+        </div>
+    </div>
+    <% }) %>
+
+
+
+    

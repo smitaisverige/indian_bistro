@@ -1,0 +1,172 @@
+Styles
+
+body {
+    margin: 0;
+    font-size: 1.0rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
+}
+.description{
+    margin: 20px;
+    text-align: center;
+    color: #7B2D00;
+    font-size: 1.4rem;
+}
+.weekday-nav {
+    display: flex;
+    gap: 0.5rem;
+    padding: 1rem 0;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.day-tab {
+    position: relative;
+    padding: 0.5rem 1.0rem;
+    border: 2px solid  #7B2D00;
+    background: transparent;
+    color: #7B2D00;
+    border-radius: 40px;
+    font-size: 1.0rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+.day-tab:hover,
+.day-tab.active {
+    background:  #E8871A;
+    color: white;
+}
+.today-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+.day-tab:not(.active) .today-dot {
+    background: #E8871A;
+}
+.day-panel {
+    display: none;
+}
+.day-panel.active {
+    display: block;
+}
+.item-card {
+    background: #ffffff;
+    border: 1px solid #EDD9BC;
+    border-radius: 14px;
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(123, 45, 0, 0.1);
+}
+.item-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #7B2D00;
+    line-height: 1.3;
+    margin: 0;
+}
+.item-price {
+    display: inline-block;
+    background: #E8871A;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.2rem 0.5rem;
+    border-radius: 20px;
+    align-self: flex-start;
+}
+.item-card p {
+    font-size: 1.0rem;
+    color: black;
+    line-height: 1.2;
+}
+.item-card p:nth-child(4),
+.item-card p:nth-child(5) {
+    font-size: 1.0rem;
+    font-weight: 400;
+    padding-top: 0.4rem;
+    border-top: 1px dashed #EDD9BC;
+}
+.item-card p:nth-child(5) {
+    border-top: none;
+    padding-top: 0;
+}
+
+.meals-grid {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.meal-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 20px;
+}
+
+.meal-column h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: hsl(22, 100%, 24%);
+    padding-bottom: 0.1em;
+    border-bottom: 2px solid #EDD9BC;
+    margin-bottom: 0.1rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* stack full width inside each column 
+.meal-column .item-card .buffet-extras {
+    flex: unset;
+    width: 80%;
+} */
+
+.buffet-extras {
+    margin: 1.1rem;
+    background: #ffffff;
+    border: 1px solid #EDD9BC;
+    border-radius: 14px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.buffet-extras:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(123, 45, 0, 0.08);
+}
+
+.buffet-extras > h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #7B2D00;
+    text-align: center;
+    margin: 0 0 1.5rem 0;
+    padding-bottom: 0.75rem;
+    border-bottom: 2px solid #EDD9BC;
+}
+
+
+
+@media (max-width: 640px) {
+    .meals-grid {
+        flex-direction: column;
+    }
+}
+
