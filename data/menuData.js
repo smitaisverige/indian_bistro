@@ -1,5 +1,27 @@
 const menuData = {
-  vegItems: [
+   starter: [
+    {
+      name: "Pakoda",
+      price: "60",
+    },
+    {
+      name: "Manchurian",
+      price: "60",
+    },
+    {
+      name: "Samosa",
+      price: "60",
+    },
+    {
+      name: "French Fries",
+      price: "60",
+    },
+    {
+      name: "Onion Rings",
+      price: "60",
+    },
+   ],
+  veg: [
     {
       name: "Paneer Tikka",
       price: "129",
@@ -22,7 +44,7 @@ const menuData = {
     }
 
   ],
-  nonVegItems: [
+  nonVeg: [
     {
       name: "Butter Chicken",
       price: "150",
@@ -44,30 +66,8 @@ const menuData = {
       price: "219",
     }
   ],
-  starterItems: [
-    {
-      name: "Pakoda",
-      price: "60",
-    },
-    {
-      name: "Manchurian",
-      price: "60",
-    },
-    {
-      name: "Samosa",
-      price: "60",
-    },
-    {
-      name: "French Fries",
-      price: "60",
-    },
-    {
-      name: "Onion Rings",
-      price: "60",
-    },
-  ],
 
-  dessertsItems: [
+  desserts: [
     {
       name: "Gulab Jamun",
       price: "60",

@@ -13,12 +13,12 @@ menurouter.get("/", (req, res) => {
 
 menurouter.get("/:category", (req, res) => {
     const category = req.params.category; 
-    const items = menuData[category] || menuData[category + "Items"]; 
+    const items = menuData[category] ; 
 
     res.render("pages/categoryList", { 
         page: "menu",
-        pageTitle: `${category.replace('Items', ' ')} Menu | Indian Bistro`, 
-        title: `${category.replace('Items',' ')}`,     
+        pageTitle: `${category} Menu | Indian Bistro`, 
+        title: `${category}`,     
         items: items,
         
     });
