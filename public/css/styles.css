@@ -97,9 +97,9 @@ nav a.active {
 }
 
 .menu-list {
-  max-width: 600px;
-  width: 100%;
-  margin: 20px 0;
+    max-width: 600px; 
+    width:100%;
+    margin: 20px 0;   
 }
 .price-tag {
   display: block;
@@ -145,8 +145,8 @@ nav a.active {
 }
 
 .menu-item-price {
-  font-weight: bold;
-  color: indianred;
+    font-weight: bold;
+    color: indianred;
 }
 .list-container {
   margin: 0;
