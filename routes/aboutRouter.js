@@ -17,7 +17,7 @@ router.get("/", (req, res) => {
     },
   };
 
-  res.render("pages/about", { page: "about", data: aboutData });
+  res.render("pages/about", { data: aboutData });
 });
 
 export default router;
