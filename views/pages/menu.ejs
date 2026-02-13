@@ -1,33 +1,30 @@
-<%- include('../partials/header') %>
+<%- include('../partials/header' , { page: "menu" })%>
 <div class="menu-container">
 <main class="category-selection">
   <h2>Explore Our Menu</h2>
   <div class="menu-grid">
 
-    <a href="/menu/starterItems" class="menu-card">
+    <a href="/menu/starter" class="menu-card">
       <div class="card-image">
         <img src="/images/menu/starter/starter.jpg" alt="Starter" />
       </div>
       <div class="card-content"><h3>Starters</h3></div>
     </a>
     
-    <a href="/menu/vegItems" class="menu-card">
+    <a href="/menu/veg" class="menu-card">
       <div class="card-image">
         <img src="/images/menu/vegmenu/veg.jpg" alt="Veg" />
       </div>
       <div class="card-content"><h3>Vegetarian</h3></div>
     </a>
 
-    <a href="/menu/nonVegItems" class="menu-card">
+    <a href="/menu/nonVeg" class="menu-card">
       <div class="card-image">
         <img src="/images/menu/nonvegmenu/nonveg.jpg" alt="Non-Veg" />
       </div>
       <div class="card-content"><h3>Non Vegetarian</h3></div>
     </a>
-
-    
-
-    <a href="/menu/dessertsItems" class="menu-card">
+    <a href="/menu/desserts" class="menu-card">
       <div class="card-image">
         <img src="/images/menu/dessert/mangokulfi.jpg" alt="Desserts" />
       </div>
@@ -36,6 +33,4 @@
   </div>
 </main>
 </div>
-
-
 <%- include('../partials/footer') %>

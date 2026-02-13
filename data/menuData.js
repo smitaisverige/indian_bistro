@@ -1,50 +1,5 @@
 const menuData = {
-  vegItems: [
-    {
-      name: "Paneer Tikka",
-      price: "129",
-    },
-    {
-      name: "Dal Makhani",
-      price: "149",
-    },
-    {
-      name: "Malai Kofta",
-      price: "129",
-    },
-    {
-      name: "Sarso Ka Saag",
-      price: "119",
-    },
-    {
-      name: "Bhendi Fry",
-      price:"89",
-    }
-
-  ],
-  nonVegItems: [
-    {
-      name: "Butter Chicken",
-      price: "150",
-    },
-    {
-      name: "Lamb Rogan Josh",
-      price: "180",
-    },
-    {
-      name: "Chicken Korma",
-      price: "150",
-    },
-    {
-      name: "Prawn Curry",
-      price: "180",
-    },
-    {
-      name: "Kadhai Chicken",
-      price: "219",
-    }
-  ],
-  starterItems: [
+   starter: [
     {
       name: "Pakoda",
       price: "60",
@@ -65,9 +20,54 @@ const menuData = {
       name: "Onion Rings",
       price: "60",
     },
+   ],
+  veg: [
+    {
+      name: "Paneer Tikka",
+      price: "129",
+    },
+    {
+      name: "Dal Makhani",
+      price: "149",
+    },
+    {
+      name: "Malai Kofta",
+      price: "129",
+    },
+    {
+      name: "Sarso Ka Saag",
+      price: "119",
+    },
+    {
+      name: "Veg Combo Thali",
+      price:"219",
+    }
+
+  ],
+  nonVeg: [
+    {
+      name: "Butter Chicken",
+      price: "150",
+    },
+    {
+      name: "Lamb Rogan Josh",
+      price: "180",
+    },
+    {
+      name: "Chicken Tikka",
+      price: "150",
+    },
+    {
+      name: "Prawn Curry",
+      price: "180",
+    },
+    {
+      name: "Kadhai Chicken Thali",
+      price: "219",
+    }
   ],
 
-  dessertsItems: [
+  desserts: [
     {
       name: "Gulab Jamun",
       price: "60",
