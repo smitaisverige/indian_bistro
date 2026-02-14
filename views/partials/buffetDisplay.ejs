@@ -1,5 +1,5 @@
 <div class="weekday-nav">
-    <% Object.keys(weekBuffet).forEach(day=> { %>
+    <% Object.keys(weeklyBuffet).forEach(day=> { %>
         <button class="day-tab <%= day === todaysWeekDay ? 'active' : '' %>" onclick="showDay('<%= day %>')">
             <%= day %>
                 <% if (day===todaysWeekDay) { %><span class="today-dot"></span>
@@ -8,52 +8,48 @@
         <% }) %>
 </div>
 
-<% Object.entries(weekBuffet).forEach(([day, menu])=> { %>
+<% Object.entries(weeklyBuffet).forEach(([day, menu])=> { %>
     <div id="day-<%= day %>" class="day-panel <%= day === todaysWeekDay ? 'active' : '' %>">
         <div class="meals-grid">
             <div class="meal-column">
                 <h3>Lunch</h3>
                 <% menu.lunch.forEach(item=> { %>
                     <div class="item-card">
-                        <h4>
-                            <%= item.itemName %>
-                        </h4>
-                        <span class="item-price">
-                            <%= item.price %>
-                        </span>
-                        <p>
-                            <%= item.itemDescription %>
-                        </p>
+                        <h4> <%= item.itemName %> : <span class="item-price"><%= item.price %></span></h4>
+                        <p> <%= item.itemDescription %> </p>
                     </div>
-                    <% }) %>
+                <% }) %>
             </div>
-
             <div class="meal-column">
                 <h3>Dinner</h3>
                 <% menu.dinner.forEach(item=> { %>
                     <div class="item-card">
-                        <h4>
-                            <%= item.itemName %>
-                        </h4>
-                        <span class="item-price">
-                            <%= item.price %>
-                        </span>
-                        <p>
-                            <%= item.itemDescription %>
-                        </p>
-                        <p>
-                            <%= item.soupName %>
-                        </p>
-                        <p>
-                            <%= item.bread %>
-                        </p>
+                        <h4> <%= item.itemName %> : <span class="item-price"><%= item.price %></span></h4>
+                        <p><%= item.itemDescription %></p>
                     </div>
-                    <% }) %>
-            </div>
+                <% }) %>
+            </div>       
         </div>
     </div>
-    <% }) %>
-
-
-
-    
+<% }) %>
+<div class="buffet-extras">
+    <div><h3 class="extras-title">Dinner Buffet Includes your Choice of......</h3></div>
+     <div class="extras-grid">
+        <div class="extra-card">
+            <h4>Bread</h4>
+            <p><%= otherItems.bread.join(" / ") %></p>
+        </div>
+        <div class="extra-card">
+            <h4>Soup</h4>
+            <p><%= otherItems.soup.join(" / ") %></p>
+        </div>
+        <div class="extra-card">
+            <h4>Starter</h4>
+            <p><%= otherItems.starter.join(" / ") %></p>
+        </div>
+        <div class="extra-card">
+            <h4>Dessert</h4>
+            <p><%= otherItems.desert.join(" / ") %></p>
+        </div>
+    </div>
+</div>
