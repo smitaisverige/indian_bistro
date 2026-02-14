@@ -1,16 +1,15 @@
-Styles
 
-body {
-    margin: 0;
-    font-size: 1.0rem;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    
-}
-.description{
+
+.description h2{
     margin: 20px;
     text-align: center;
     color: #7B2D00;
     font-size: 1.4rem;
+    text-align: center;
+}
+h2 {
+    text-align: center;
+    margin: 0.8rem;
 }
 .weekday-nav {
     display: flex;
@@ -22,19 +21,19 @@ body {
 }
 .day-tab {
     position: relative;
-    padding: 0.5rem 1.0rem;
-    border: 2px solid  #7B2D00;
+    padding: 0.3rem  0.7rem;
+    border: 2px solid  black;
     background: transparent;
-    color: #7B2D00;
+    /*color: #7B2D00;*/
     border-radius: 40px;
-    font-size: 1.0rem;
-    font-weight: 500;
+    font-size: 0.9rem;
+    
     cursor: pointer;
     transition: background 0.2s, color 0.2s;
 }
 .day-tab:hover,
 .day-tab.active {
-    background:  #E8871A;
+    background:  #7a3b3b;
     color: white;
 }
 .today-dot {
@@ -47,7 +46,7 @@ body {
     vertical-align: middle;
 }
 .day-tab:not(.active) .today-dot {
-    background: #E8871A;
+    background: #7a3b3b;
 }
 .day-panel {
     display: none;
@@ -74,13 +73,13 @@ body {
     font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
     font-weight: 600;
-    color: #7B2D00;
+    /*color: #7B2D00;*/
     line-height: 1.3;
     margin: 0;
 }
 .item-price {
     display: inline-block;
-    background: #E8871A;
+    background: #7a3b3b;
     color: #ffffff;
     font-size: 0.8rem;
     font-weight: 500;
@@ -98,7 +97,6 @@ body {
     font-size: 1.0rem;
     font-weight: 400;
     padding-top: 0.4rem;
-    border-top: 1px dashed #EDD9BC;
 }
 .item-card p:nth-child(5) {
     border-top: none;
@@ -122,7 +120,7 @@ body {
 .meal-column h3 {
     font-size: 1.2rem;
     font-weight: 600;
-    color: hsl(22, 100%, 24%);
+    
     padding-bottom: 0.1em;
     border-bottom: 2px solid #EDD9BC;
     margin-bottom: 0.1rem;
@@ -137,13 +135,16 @@ body {
 } */
 
 .buffet-extras {
-    margin: 1.1rem;
+    margin: 1.1rem auto;
     background: #ffffff;
     border: 1px solid #EDD9BC;
     border-radius: 14px;
     padding: 1.5rem;
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
+    width: 70%;
+    font-size: 1.0rem;
+    line-height: 1.4;
 }
 
 .buffet-extras:hover {
