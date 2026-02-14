@@ -1,35 +1,17 @@
 import express from "express";
-import { weeklyLunchBuffet, weeklyDinnerBuffet, otherItems } 
-  from '../data/weeklyBuffetData.js';
+import { weeklyBuffet, otherItems} from "../data/buffetData.js" 
 
 const buffetRouter = express.Router();
 
-function buildPayload(mealType = "both") {
-    const dayName = [
-        'Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday' ][new Date().getDay()];
-    return {
-        weeklyLunchBuffet,
-        weeklyDinnerBuffet,
-        otherItems,
-        todaysWeekDay: dayName,
-        description: "Our carefully curated tasteful Buffet",
-        pageType: "Buffet",
-        mealType,
-        page: "buffet"   
-    };
-}
-
-
-buffetRouter.get("/", (req, res) =>
-  res.render("pages/featured", buildPayload("both"))
-);
-
-buffetRouter.get("/lunch", (req, res) =>
-  res.render("pages/featured", buildPayload("lunch"))
-);
-
-buffetRouter.get("/dinner", (req, res) =>
-  res.render("pages/featured", buildPayload("dinner"))
-);
-
+buffetRouter.get("/", (req, res) => {
+  const dayName = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'][new Date().getDay()];
+  res.render("pages/featured",
+        {
+            weeklyBuffet: weeklyBuffet,
+            todaysWeekDay: dayName,
+            description: "Our carefully curated tasteful Buffet",
+            page:"buffet",
+            otherItems:otherItems
+        });
+});
 export default buffetRouter;

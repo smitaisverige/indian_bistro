@@ -9,6 +9,7 @@ body {
   color: #3a2317;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
+  font-size: 1.1rem;   
 }
 
 a {
@@ -50,6 +51,7 @@ nav a {
   padding-bottom: 4px;
   transition: all 0.3s ease;
   text-decoration: none;
+  
 }
 
 nav a:hover,
